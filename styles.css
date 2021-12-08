@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200&family=Lora:wght@500&family=Montserrat:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: black;
+    --text-color: white;
+}
+
+body {
+    background-color: var(--primary-color);
+    min-height: 100%;
+    min-width: fit-content;
+    color: var(--text-color);
+}
+
+.nav-heading {
+    border: 1px solid;
+    margin: 1em;
+    margin-left: 3em;
+    font-size: 20px;
+    padding: 0.7em;
+    font-family: 'Crimson Pro', serif;
+    font-weight: normal;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid; */
+}
+
+.nav-menu {
+    /* justify-content: center; */
+    margin: 0 3vw;
+}
+
+ul {
+    /* border: 1px solid; */
+    list-style: none;
+}
+
+.nav-menu li {
+    display: inline-block;
+    margin: 0 3.5vw;
+    font-size: 20px;
+}
+
+.nav-menu a:hover {
+    border-bottom: 2px solid;
+    font-weight: 700;
+}
+
+.nav-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.2em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.hamburger-menu,
+.toggler {
+    display: none;
+}
+
+
+/* container */
+
+.container {
+    /* margin-top: 3%; */
+    /* border: 1px solid; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin:4em 2em;
+    margin-bottom: 0;
+}
+
+/* message wrapper */
+
+.message-wrapper {
+    /* border: 1px solid; */
+    padding-top: 7em;
+}
+
+.message-wrapper h1 {
+    font-size: 50px;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+
+.message-wrapper p {
+    font-size: 26px;
+    width: 410px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.message-wrapper .read-more {
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.message-wrapper .read-more>.arrow {
+    padding: 3%;
+}
+
+
+/* message image */
+
+.message-image-wrapper {
+    /* border: 1px solid; */
+    max-height: 79vh;
+}
+
+.interior-image {
+    padding-top: 3vh;
+    /* width: 40vw; */
+    max-width: 770px;
+}
+
+.twitter-post {
+    width: 400px;
+    /* background-color: var(--primary-color); */
+    /* border: 1px solid; */
+    position: relative;
+    left: 18em;
+    bottom: 8em;
+    background: #181719;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0.1em;
+    padding: 0.3em 1.5em;
+}
+
+.twitter-post>.user {
+    display: flex;
+}
+
+.twitter-post .user-info {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin-left: 1em;
+}
+
+.twitter-post .username {
+    font-size: 20px;
+    margin-bottom: 0px;
+    font-weight: normal;
+}
+
+.twitter-post .user-about {
+    font-size: 14px;
+    margin-top: 0.5em;
+    color: #828282;
+}
+
+.twitter-post .profile-picture {
+    width: 4em;
+    border-radius: 50%;
+    padding: 0.7em;
+}
+
+.twitter-post .post-content {
+    font-size: 28px;
+    font-weight: bold;
+    width: 300px;
+    margin-top: 0.4em;
+    margin-bottom: 0.3;
+    padding: 0 0.3em;
+    font-family: 'Lora', serif;
+    /* font-weight: 700; */
+    letter-spacing: 0.1rem;
+    font-weight: normal;
+}
+
+/* footer */
+footer {
+    position: absolute;
+    bottom: 3vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 14px;
+    color: #A9A9A9;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+footer a {
+    color: #A9A9A9;
+    font-weight: bold;
+}
+
+@media (max-width: 380px) {
+
+    .nav-heading {
+        font-size: 40px;
+        margin-left: 5vw;
+    }
+
+    .hamburger-menu,
+    .toggler {
+        display: block;
+    }
+
+    .toggler {
+        position: absolute;
+        left: 245vw;
+        top: 60px;
+        width: 65px;
+        height: 50px;
+        z-index: 3;
+        opacity: 0;
+    }
+
+    .hamburger-menu {
+        position: absolute;
+        top: 5vh;
+        left: 240vw;
+        margin: 1em;
+    }
+
+    .menu-lines {
+        width: 80px;
+        height: 12px;
+        background-color: var(--text-color);
+        margin-bottom: 10px;
+        border-radius: 1rem;
+    }
+
+    .toggler:checked~.hamburger-menu{
+        margin-top: 3em;
+    }
+
+    .toggler:checked~.hamburger-menu .first-line {
+        transform: rotate(315deg);
+        /* translateY(-2px) */
+        /* transform-origin: 10%; */
+        /* transform-origin:0 0; */
+        transition: 0.5s;
+    }
+
+    .toggler:checked~.hamburger-menu>.second-line {
+        opacity: 0;
+    }
+
+    .toggler:checked~.hamburger-menu>.third-line {
+        /* transform: translateY(100px); */
+        transform: rotate(-135deg) translateY(30px) translateX(32px);
+        /* translateY(-12px) translateX(13px) */
+
+        transition: 0.5s;
+    }
+
+    .toggler:not(:checked)~.hamburger-menu>.menu-lines {
+        transition: 0.5s;
+    }
+
+
+    .toggler:not(:checked)~.nav-menu {
+        display: none;
+        transition: 0.5s;
+    }
+
+    .toggler:checked~.nav-menu {
+        background-color: var(--primary-color);
+        position: absolute;
+        top: 40vw;
+        left: 0;
+        text-align: center;
+        z-index: 2;
+        padding: 98vh 100vw;
+        transition: 0.5s ease ease-in;
+    }
+
+    .toggler:checked~.nav-heading {
+        visibility: hidden;
+    }
+
+    .nav-menu li {
+        margin-bottom: 10vh;
+        font-size: 50px;
+    }
+
+
+    .container {
+        justify-content: flex-start;
+        margin-left: 2em;
+    }
+
+    .message-wrapper {
+        padding-top: 1em;
+    }
+
+    .message-wrapper h1 {
+        font-size: 100px;
+    }
+
+    .message-wrapper p {
+        width: 650px;
+        font-size: 40px;
+    }
+
+    .message-wrapper .read-more {
+        font-size: 35px;
+        margin: 2.5em 0;
+    }
+
+    .interior-image {
+        min-width: 1000px;
+    }
+
+    .twitter-post {
+        min-width: 815px;
+        left: 6.5em;
+        bottom: 10em;
+    }
+
+    .twitter-post .profile-picture {
+        width: 8em;
+        padding: 1.5em;
+        margin-top: 1em;
+    }
+
+    .twitter-post .username {
+        font-size: 35px;
+    }
+
+    .twitter-post .user-about {
+        font-size: 26px;
+    }
+
+    .twitter-post .post-content {
+        margin-top: 0.5em;
+        width: 570px;
+        font-size: 56px;
+    }
+
+
+    footer {
+        font-size: 38px;
+        position: fixed;
+        bottom: 4vh;
+    }
+}
