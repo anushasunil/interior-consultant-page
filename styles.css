@@ -289,6 +289,10 @@ footer a {
         font-size:15px;
     }
 
+    .interior-image {
+        padding-left:0;
+    }
+
     .message-wrapper h1{
         font-size: 50px;
     }
@@ -300,8 +304,16 @@ footer a {
 }
 
 @media (max-width: 550px){
+    .nav-heading{
+        margin-left:1em
+    }
+
     .nav-menu {
         margin-right:0;
+    }
+
+    .nav-menu a {
+        font-size:12px;
     }
     /* footer {
         margin-top: 30vh;
@@ -313,6 +325,10 @@ footer a {
     .nav-heading {
         font-size: 40px;
         margin-left: 5vw;
+    }
+
+    .nav-menu a {
+        font-size:60px;
     }
 
     .hamburger-menu,
@@ -327,7 +343,7 @@ footer a {
         width: 65px;
         height: 50px;
         z-index: 3;
-        /* opacity: 0; */
+        opacity: 0;
     }
 
     .hamburger-menu {
@@ -427,7 +443,7 @@ footer a {
 
     .message-wrapper .read-more {
         font-size: 35px;
-        margin: 2.5em 0;
+        margin: 1.5em 0;
     }
 
     .interior-image {
@@ -442,16 +458,18 @@ footer a {
 
     .twitter-post .profile-picture {
         width: 8em;
+        height:8em;
         padding: 1.5em;
         margin-top: 1em;
     }
 
     .twitter-post .username {
-        font-size: 35px;
+        margin-top: 1em;
+        font-size: 45px;
     }
 
     .twitter-post .user-about {
-        font-size: 26px;
+        font-size: 35px;
     }
 
     .twitter-post .post-content {
@@ -462,25 +480,41 @@ footer a {
 
 
     footer {
-        margin-top: 75vh;
+        margin-top: 70vh;
         padding: 1em;
+        font-size:30px;
         /* position: fixed; */
         /* bottom: 4vh; */
     }
 }
 
-@media (max-width: 361px) {
+@media (max-width:375px) {
+    .hamburger-menu {
+        left: 60em;
+    }
+
+    footer {
+        margin-top: 75vh;
+    }
+}
+
+@media (max-width: 360px) {
     /* .menu-lines {
         position: relative;
         top: 1em;
         left: 1em;
     } */
 
+    .hamburger-menu {
+        left: 65em;
+    }
+
     .toggler:checked~nav .nav-menu {
-        left: 350px;
+        left: 23em;
     }
 
     footer {
+        /* font-size: 30px; */
         margin-top: 140vh;
     }
 }
@@ -508,15 +542,17 @@ footer a {
         margin: 2em;
     } */
 
-    .menu-lines {
-        position: relative;
-        top: 1em;
-        left: 5em;
+    .hamburger-menu {
+        left: 65em;
     }
 
 
     .toggler:checked~nav .hamburger-menu {
-        left: 58em;
+        left: 45em;
+    }
+
+    .toggler:checked~nav .nav-menu {
+        left: 25em;
     }
 
     .twitter-post {
@@ -525,17 +561,31 @@ footer a {
     }
 
     footer {
-        font-size:30px;
-        padding-top: 20vh;
+        padding-top: 15vh;
+        font-size: 35px;
     }
 }
 
-@media (max-width:375px) {
+@media (max-width:280px) {
     .hamburger-menu {
-        left: 60em;
+        top:2em;
+        left: 55em;
+    }
+
+    .toggler:checked {
+        left:60em
+    }
+
+    .toggler:checked~nav .nav-menu {
+        left: 16em;
+    }
+
+    .twitter-post {
+        min-width:800px;
     }
 
     footer {
-
+        padding-top:0;
     }
+
 }
