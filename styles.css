@@ -300,6 +300,14 @@ footer a {
         /* font-size: 25px; */
         margin-top:4vh;
     }
+    
+    .container {
+        height: 60em;
+    }
+
+    .message-wrapper {
+        height: 1em;
+    }
 }
 
 @media (max-width: 770px){
@@ -343,8 +351,8 @@ footer a {
         font-size:12px;
     }
 
-    .container {
-        height:60em;
+    .message-wrapper {
+        height:40em;
     }
     
 
@@ -373,7 +381,7 @@ footer a {
         width: 65px;
         height: 50px;
         z-index: 3;
-        opacity: 0;
+        /* opacity: 0; */
     }
 
     .hamburger-menu {
@@ -578,7 +586,7 @@ footer a {
 
 
     .toggler:checked~nav .hamburger-menu {
-        left: 45em;
+        left: 63em;
     }
 
     .toggler:checked~nav .nav-menu {
@@ -608,6 +616,10 @@ footer a {
 
     .toggler:checked~nav .nav-menu {
         left: 16em;
+    }
+
+    .toggler:checked~nav .hamburger-menu {
+        left: 45em;
     }
 
     .twitter-post {
