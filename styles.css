@@ -210,6 +210,10 @@ footer a {
         bottom:5em;
     }
 
+    .container {
+        height:35em;
+    }
+
 }
 
 
@@ -326,7 +330,7 @@ footer a {
     }
 }
 
-@media (max-width: 550px){
+@media (max-width: 540px){
     .nav-heading{
         margin-left:1em
     }
@@ -338,9 +342,12 @@ footer a {
     .nav-menu a {
         font-size:12px;
     }
-    /* footer {
-        margin-top: 30vh;
-    } */
+
+    .container {
+        height:60em;
+    }
+    
+
 }
 
 @media (max-width: 420px) {
