@@ -194,6 +194,7 @@ footer a {
     font-weight: bold;
 }
 
+
 @media (max-width:1280px) {
     .message-wrapper{
         padding-top:3em;
@@ -214,6 +215,13 @@ footer a {
         width:240px;
     }
 
+}
+
+
+@media (max-width:1440px) {
+    .container {
+        margin-top: 1em;
+    }
 }
 
 @media (max-width: 1030px) {
