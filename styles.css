@@ -210,17 +210,32 @@ footer a {
         bottom:5em;
     }
 
-    .twitter-post .post-content {
-        font-size: 20px;
-        width:240px;
-    }
-
 }
 
 
 @media (max-width:1440px) {
     .container {
         margin-top: 1em;
+    }
+    .interior-image {
+        width: 600px;
+    }
+    .twitter-post {
+        left:14em;
+        width:320px;
+    }
+
+    .twitter-post .post-content {
+        font-size: 20px;
+        width:250px
+    }
+    .twitter-post .username {
+        font-size: 15px;
+    }
+
+    .twitter-post .profile-picture {
+        width:4em;
+        padding-right: 0;
     }
 }
 
